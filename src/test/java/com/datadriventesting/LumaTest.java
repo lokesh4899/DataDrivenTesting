@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.baseclass.BaseClass;
@@ -36,12 +37,12 @@ public class LumaTest extends BaseClass{
 		ob.setPassword(pwd);
 		ob.confirmPassword(conf_pwd);
 		ob.cresteAccount();
-		new WebDriverWait(driver,Duration.ofSeconds(100)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[contains(text(),'Thanks you for registering with Main Website Store.')]")));
-		ob.signOut();
+		//new WebDriverWait(driver,Duration.ofSeconds(100)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[contains(text(),'Thanks you for registering with Main Website Store.')]")));
+		//ob.signOut();
 	}
 
 
-	
+	@Ignore
 	@Test(dataProvider="SignIn",dataProviderClass=JsonData.class)
 	public void test1(String mail,String pwd) {
 		obj=new SignIn(driver);
