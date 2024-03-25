@@ -1,16 +1,16 @@
 {
 "registerTestData":[
 {
-"firstname": "matheesha",
-"lastname": "babu",
-"email": "pathirana@gmail.com",
+"firstname": "rick",
+"lastname": "grimes",
+"email": "rickgrimes@gmail.com",
 "password" : "Role Description",
 "confirm_password": "Role Description"
 }
 ],
 "signInData":[
 {
-"email" :  "pathirana@gmail.com",
+"email" :  "rickgrimes@gmail.com",
 "password" : "Role Description"
 }
 ],
