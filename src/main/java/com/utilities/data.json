@@ -1,16 +1,82 @@
 {
 "registerTestData":[
 {
-"firstname": "rick",
-"lastname": "grimes",
-"email": "rickgrimes@gmail.com",
+"scenario" : "valid",
+"firstname": "mohan",
+"lastname": "krishna",
+"email": "mohankrishna@gmail.com",
 "password" : "Role Description",
 "confirm_password": "Role Description"
+},
+{
+"scenario" : "invalid_email",
+"firstname": "mohan",
+"lastname": "krishna",
+"email": "mohankrishnagmail.com",
+"password" : "Role Description",
+"confirm_password": "Role Description"
+},
+{
+"scenario" : "empty_first_name",
+"firstname": "",
+"lastname": "krishna",
+"email": "mohankrishna@gmail.com",
+"password" : "Role Description",
+"confirm_password": "Role Description"
+},
+{
+"scenario" : "empty_last_name",
+"firstname": "mohan",
+"lastname": "",
+"email": "mohankrishna@gmail.com",
+"password" : "Role Description",
+"confirm_password": "Role Description"
+},
+{
+"scenario" : "empty_email",
+"firstname": "mohan",
+"lastname": "krishna",
+"email": "",
+"password" : "Role Description",
+"confirm_password": "Role Description"
+},
+{
+"scenario" : "empty_pwd",
+"firstname": "mohan",
+"lastname": "krishna",
+"email": "mohankrishna@gmail.com",
+"password" : "",
+"confirm_password": "Role Description"
+},
+{
+"scenario" : "empty_conifrm_pwd",
+"firstname": "mohan",
+"lastname": "krishna",
+"email": "mohankrishna@gmail.com",
+"password" : "Role Description",
+"confirm_password": ""
+},
+{
+"scenario" : "pwd_conf_pwd_mismatch",
+"firstname": "mohan",
+"lastname": "krishna",
+"email": "mohankrishna@gmail.com",
+"password" : "Role Description",
+"confirm_password": "Role"
+},
+{
+"scenario" : "pwd_less_than_8_digits",
+"firstname": "mohan",
+"lastname": "krishna",
+"email": "mohankrishna@gmail.com",
+"password" : "Role",
+"confirm_password": "Role"
 }
 ],
 "signInData":[
 {
-"email" :  "rickgrimes@gmail.com",
+"scenario" : "valid",
+"email" :  "mohankrishna@gmail.com",
 "password" : "Role Description"
 }
 ],

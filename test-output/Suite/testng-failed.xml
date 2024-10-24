@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="RgisterTest(failed)">
     <classes>
-      <class name="com.datadriventesting.LumaTest">
+      <class name="com.datadriventesting.SignUp">
         <methods>
-          <include name="test0" invocation-numbers="0"/>
-          <include name="test1" invocation-numbers="0"/>
-          <include name="Before"/>
-          <include name="TearUp"/>
+          <include name="validDetails" invocation-numbers="0 1 2 3"/>
+          <include name="browserLaunch"/>
           <include name="setUp"/>
+          <include name="TearUp"/>
         </methods>
-      </class> <!-- com.datadriventesting.LumaTest -->
+      </class> <!-- com.datadriventesting.SignUp -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- RgisterTest(failed) -->
+  <test thread-count="5" name="LoginTest(failed)">
+    <classes>
+      <class name="com.datadriventesting.Login">
+        <methods>
+          <include name="browserLaunch"/>
+          <include name="validCredentials" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="TearUp"/>
+        </methods>
+      </class> <!-- com.datadriventesting.Login -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

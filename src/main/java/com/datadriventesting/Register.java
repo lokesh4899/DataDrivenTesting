@@ -27,8 +27,20 @@ public class Register {
 	WebElement dropdown_button;
 	@FindBy(linkText="Sign Out")
 	WebElement sign_out;
+	@FindBy(className="base")
+	WebElement create_an_account;
 	@FindBy(xpath="//*[@class='messages']/div/div")
 	WebElement Welcome_msg;
+	@FindBy(id="firstname-error")
+	WebElement firstname_error;
+	@FindBy(id="lastname-error")
+	WebElement lastname_error;
+	@FindBy(id="email_address-error")
+	WebElement email_error;
+	@FindBy(id="password-error")
+	WebElement pwd_error;
+	@FindBy(id="password-confirmation-error")
+	WebElement confirm_pwd_error;
 	
 	
 	public Register(WebDriver driver) {
@@ -38,6 +50,9 @@ public class Register {
 	
 	public void signOn() {
 		create_Account.click();
+	}
+	public String CreateCustomerAccount() {
+		return create_an_account.getText();
 	}
 	public void setFirstName(String fname) {
 		first_name.sendKeys(fname);
@@ -63,6 +78,26 @@ public class Register {
 	}
 	public String Msg() {
 		return Welcome_msg.getText();
+	}
+	
+	public String fNameErrorMsg() {
+		return firstname_error.getText();
+	}
+	
+	public String lNameErrorMsg() {
+		return lastname_error.getText();
+	}
+	
+	public String emailErrorMsg() {
+		return email_error.getText();
+	}
+	
+	public String pwdErrorMsg() {
+		return pwd_error.getText();
+	}
+	
+	public String confirmpPwdErrorMsg() {
+		return confirm_pwd_error.getText();
 	}
 
 }

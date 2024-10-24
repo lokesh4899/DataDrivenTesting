@@ -20,15 +20,16 @@ public class JsonData {
 		Object obj=jsonparser.parse(reader);
 		JSONObject userregisterJsonObj=(JSONObject)obj;
 		JSONArray registerArray=(JSONArray)userregisterJsonObj.get("registerTestData");
-		Object[][] data=new Object[registerArray.size()][5];
+		Object[][] data=new Object[registerArray.size()][6];
 		
 		for(int i=0;i<registerArray.size();i++) {
 			JSONObject users=(JSONObject) registerArray.get(i);
-			data[i][0]=users.get("firstname").toString();
-			data[i][1]=users.get("lastname").toString();
-			data[i][2]=users.get("email").toString();
-			data[i][3]=users.get("password").toString();
-			data[i][4]=users.get("confirm_password").toString();
+			data[i][0]=users.get("scenario").toString();
+			data[i][1]=users.get("firstname").toString();
+			data[i][2]=users.get("lastname").toString();
+			data[i][3]=users.get("email").toString();
+			data[i][4]=users.get("password").toString();
+			data[i][5]=users.get("confirm_password").toString();
 		}
 		return data;
 	}
@@ -42,13 +43,14 @@ public class JsonData {
 		Object obj=jsonparser.parse(reader);
 		JSONObject userregisterJsonObj=(JSONObject)obj;
 		JSONArray registerArray=(JSONArray)userregisterJsonObj.get("signInData");
-		Object[][] data=new Object[registerArray.size()][2];
+		Object[][] data=new Object[registerArray.size()][3];
 		
 		for(int i=0;i<registerArray.size();i++) {
 			
 			JSONObject users=(JSONObject) registerArray.get(i);
-			data[i][0]=users.get("email").toString();
-			data[i][1]=users.get("password").toString();
+			data[i][0]=users.get("scenario").toString();
+			data[i][1]=users.get("email").toString();
+			data[i][2]=users.get("password").toString();
 		}
 		return data;
 	}
